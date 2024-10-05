@@ -1,1 +1,2 @@
 # Visual-Question-and-Answering-Model
+This repository contains an implementation of a Visual Question Answering (VQA) model built using the BLIP (Bootstrapping Language-Image Pre-training) framework. This model can understand image content and answer questions related to the provided images.
