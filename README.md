@@ -44,11 +44,12 @@ The BLIP-based VQA model is similar in concept to CLIP but utilizes the BLIP pre
 
 Model Architecture:
 --------------------
-Image Encoding: BLIP uses a Vision Transformer (ViT) model to extract visual embeddings.
-Text Encoding: BLIP tokenizes the question and applies a Transformer-based model to extract textual features.
-Feature Fusion: The image and text embeddings are fused using a cross-attention mechanism.
-Answer Prediction: The fused features are passed through a fully connected network to generate the predicted answer.
-Training Procedure
+- Image Encoding: BLIP uses a Vision Transformer (ViT) model to extract visual embeddings.
+- Text Encoding: BLIP tokenizes the question and applies a Transformer-based model to extract textual features.
+- Feature Fusion: The image and text embeddings are fused using a cross-attention mechanism.
+- Answer Prediction: The fused features are passed through a fully connected network to generate the predicted answer.
+  
+Training Procedure:
 Like CLIP, BLIP uses a cross-entropy loss for answer prediction. The answerable confidence score is calculated as part of the final layer using a binary cross-entropy loss to determine whether the question can be answered or not.
 
 Training and Evaluation:
@@ -56,15 +57,15 @@ Training and Evaluation:
 Training Process
 For both the CLIP and BLIP models:
 
-Dataset Preparation: The images are preprocessed using their respective model preprocessors (clip and blip).
-Model Training: The model is trained for 30 epochs, with early stopping applied if validation loss doesn't improve for 10 epochs.
-Metrics: We use accuracy and average precision score for performance evaluation on both training and validation datasets.
-Early Stopping and Checkpoints
-Early Stopping: If validation loss doesn't improve for 10 consecutive epochs, training is stopped.
-Model Checkpoints: The model with the best validation loss is saved for further evaluation.
-Evaluation Metrics
-Accuracy: Measures the percentage of correctly predicted answers.
-Average Precision: Used to evaluate models on tasks where answers have varying confidence scores.
+- Dataset Preparation: The images are preprocessed using their respective model preprocessors (clip and blip).
+- Model Training: The model is trained for 30 epochs, with early stopping applied if validation loss doesn't improve for 10 epochs.
+- Metrics: We use accuracy and average precision score for performance evaluation on both training and validation datasets.
+- Early Stopping and Checkpoints
+- Early Stopping: If validation loss doesn't improve for 10 consecutive epochs, training is stopped.
+- Model Checkpoints: The model with the best validation loss is saved for further evaluation.
+- Evaluation Metrics
+- Accuracy: Measures the percentage of correctly predicted answers.
+- Average Precision: Used to evaluate models on tasks where answers have varying confidence scores.
 
 Installation and Setup:
 -----------------------
