@@ -28,10 +28,10 @@ The CLIP-based VQA model uses the pre-trained CLIP model to extract both visual 
 
 Model Architecture:
 --------------------
-Image Encoding: CLIP's ResNet-based model processes the image to generate a feature vector.
-Text Encoding: CLIP tokenizes the question and generates the corresponding text features.
-Concatenation: The image and text embeddings are concatenated into a single tensor of size 2048.
-Fully Connected Layers: A neural network with two fully connected layers is applied to the concatenated features to predict the most likely answer.
+- Image Encoding: CLIP's ResNet-based model processes the image to generate a feature vector.
+- Text Encoding: CLIP tokenizes the question and generates the corresponding text features.
+- Concatenation: The image and text embeddings are concatenated into a single tensor of size 2048.
+- Fully Connected Layers: A neural network with two fully connected layers is applied to the concatenated features to predict the most likely answer.
 
 Training Procedure:
 --------------------
